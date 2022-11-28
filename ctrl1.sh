@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-RPATH=./opencv-motion/
+RPATH=./opencv-motion-detector
 
 case $1 in
   start)

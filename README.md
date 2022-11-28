@@ -33,7 +33,7 @@ Edit the config file according to your configuration
 
 ## Running the code
 
-Just execute detect.py
+Just execute ctrl1 after changing its `RPATH` to your path to this repo
 ```
-python detect.py
+./ctrl1
 ```
