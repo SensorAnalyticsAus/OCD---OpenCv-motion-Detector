@@ -1,10 +1,10 @@
 #!/bin/bash -l
 
-RPATH=./opencv-motion-detector
+RPATH=~/tmp/OpenCv-motion-Detector
 
 case $1 in
   start)
-  cd $RPATH;/usr/bin/screen -S crtl1 -dm ./driver.py;;
+  cd $RPATH;/usr/bin/screen -S crtl1 -dm python ./driver.py;;
   stop)
      kill $(pgrep -f 'python ./driver.py')  2> /dev/null
      if [ $? = 0 ] 
