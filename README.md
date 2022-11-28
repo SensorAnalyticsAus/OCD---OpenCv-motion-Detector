@@ -1,4 +1,4 @@
-# Simple Motion Detection NVR
+# OCD Motion Detection NVR
 
 This software NVR is based on gilelias' excellent <a href="https://github.com/gilelias/rtsp-motion">POC using opencv to detect motion in rtsp stream</a>. This implementation converts a SDCard based motion recording ip cam or a basic usb cam into a fully featured ip cam with online access to motion events and option to perform <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a>. Tested with Tapo, Sricam, PiCam, and Macbook Pro 2018's builtin camera.
 ### Demo
