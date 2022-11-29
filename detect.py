@@ -113,7 +113,8 @@ if __name__ == '__main__':
                     preEvent(cap,img_minus)
                 img = imgResize(img,perc)
                 handleChange(img)
-                print("MOTION DETECTED : ---> Image",imgCnt," Saved")
+                print(datetime.now().strftime("%d/%m %H:%M:%S"),\
+                      "MOTION DETECTED:-> Image",imgCnt," Saved")
                 if numFrames > 0 : # save few frames after the event
                     postEvent(cap,numFrames,perc)
                     break          #restart after these frame captures
