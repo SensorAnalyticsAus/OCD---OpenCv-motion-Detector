@@ -99,7 +99,6 @@ if __name__ == '__main__':
         t_minus = cv2.cvtColor(img_minus, cv2.COLOR_RGB2GRAY)
         t = cv2.cvtColor(np.copy(img), cv2.COLOR_RGB2GRAY)
         t_plus = cv2.cvtColor(img_plus, cv2.COLOR_RGB2GRAY)
-
         while(True):
             if terminate:
                 print("Oh-o gotta go inner...")
@@ -138,8 +137,8 @@ if __name__ == '__main__':
                     # mtime is set to 0.9*mtime of the oldest f 
                     print('DiskUse:',duse,'>',dlim,'file rm',dpath,',mt:',mt)
                     sadiskManage(dpath,mt) #files older than mt are deleted 
-                else:
-                    print('DiskUse:',duse,'<',dlim,'all good no file rm needed')
+                #else:
+                    #print('DiskUse:',duse,'<',dlim,'all good no file rm needed')
                 time_st = time_end # advance start time
             if showvid == 1: # open X-window diplay for cam stream
                 cv2.imshow('VIDEO', imgResize(img,perc))
