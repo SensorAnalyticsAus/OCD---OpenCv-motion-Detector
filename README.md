@@ -4,6 +4,7 @@ This software NVR is based on gilelias' excellent <a href="https://github.com/gi
 ### Demo
 https://youtu.be/R4qauQm8y-M
 ## What's New (in reverse chronological order)
+* Multiple cameras can be motion-detected with suitable mods to *cam??* filenames.
 * `crtl1.sh` can be used to control `driver.py` with *start|stop* arguments.
 * `driver.py` added to make `detect.py` into a backgrounded-screen daemon, which can be started at boot through cron (e.g. `@reboot /home/saauser/bin/ctrl1 start`). 
 * `config.py` option for activating camera liveview window side-by-side. Requires X-win supporting terminal e.g. as the one in the PiOS Remote Desktop (where it can be kept running within a `screen`). 
@@ -34,7 +35,11 @@ Edit the config file according to your configuration
 
 ## Running the code
 
-Just execute ctrl1 after changing its `RPATH` to your path to this repo
+Just execute ctrl1 after changing its `RPATH` to your path to this repo (Remember to edit `config.py` first).
 ```
-./ctrl1
+./ctrl-cam01 start
+```
+To stop:
+```
+./ctrl-cam01 stop
 ```

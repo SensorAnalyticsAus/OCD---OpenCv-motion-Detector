@@ -5,7 +5,7 @@ import os
 
 while True:
     try:
-        os.system('python ./detect.py')
+        os.system('python ./detect-cam01.py')
     except:
         sleep(30)
         pass

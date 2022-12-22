@@ -60,7 +60,7 @@ def addts(tsok,frame,ts):
     if tsok:
         cv2.putText(frame, ts.strftime(
         "%d-%b-%Y %H:%M:%S"), (10, frame.shape[0] - 10),
-        cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 0, 255), 1)
+        cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 255, 255), 1)
     return(frame)
 
 if __name__ == '__main__':
