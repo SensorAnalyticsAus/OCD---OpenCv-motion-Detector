@@ -1,6 +1,5 @@
 #!/bin/bash -l
 
-MPATH=./
 RPATH=./
 SCRNM=cam01
 PROGNM=driver-cam01.py
