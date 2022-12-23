@@ -35,7 +35,7 @@ Edit the config file according to your configuration
 
 ## Running the code
 
-Just execute ctrl1 after changing its `RPATH` to your path to this repo (Remember to edit `config.py` first).
+Just execute ctrl after changing its `RPATH` to your path to this repo (Remember to edit `config.py` first).
 ```
 ./ctrl-cam01 start
 ```
