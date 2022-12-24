@@ -15,7 +15,7 @@ https://youtu.be/R4qauQm8y-M
 * `config.py` option to specify usb cam.
 * `config.py` option to scale-down motion-detected frames before saving to disk.
 * `moviefrm-jpg` Creates a slideshow of the saved frames.
-* `detect.py` option to record a frame before and <i>numFrames</i> after each event is added in `config.py`. White space is removed in the saved frame file names to facilitate post-processing.
+* `detect-cam01.py` option to record a frame before and <i>numFrames</i> after each event is added in `config.py`. White space is removed in the saved frame file names to facilitate post-processing.
 
 ## Getting Started
 
