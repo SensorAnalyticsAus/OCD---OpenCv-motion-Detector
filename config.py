@@ -1,7 +1,12 @@
 import os
 
-urlx='rtsp://usrname:password@Router_ip:Port/whatever_vendor_string'
-threshold =  100000     # Lower/raise it for higher/lower sensitivity
+#urlx = 0 # device index 0 is for the 1st usb cam or PiCam
+#urlx='rtsp://192.168.1.21/onvif1' # sricam
+urlx='rtsp://usrname:passwd@router_ip:port/whatever_vendor_string'
+threshold =  30000      # Lower/raise it for higher/lower sensitivity
+threshold2 = 10000      # For night time, lower value to heighten sensitivity
+st_time = 21            # Night time threshold starts from e.g. 9pm 
+en_time =  5            # Night time threshold end at e.g. 5am 
 numFrames = 0           # 0 disables this option
 perc = 90               # percent by which to scale saved frames
 tsok = 1                # 0 no timestamp | 1 saved frames are timestamped

@@ -5,7 +5,7 @@ import numpy as np
 from datetime import datetime
 from time import gmtime, strftime, time, sleep
 from config import url,username,password,channel,threshold,urlx,numFrames,\
-     perc,tsok,dlim,dfreq,dpath,dday,showvid
+     perc,tsok,dlim,dfreq,dpath,dday,showvid,threshold2,st_time,en_time
 from sautils import saoldestFile,sadiskUse,sadiskManage
 import signal,os,sys
 
@@ -60,9 +60,15 @@ def addts(tsok,frame,ts):
     if tsok:
         cv2.putText(frame, ts.strftime(
         "%d-%b-%Y %H:%M:%S"), (10, frame.shape[0] - 10),
-        cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 255, 255), 1)
+        cv2.FONT_HERSHEY_SIMPLEX, 0.55, (255, 255, 255), 1)
     return(frame)
-
+def setthresh(start_time,end_time):
+    timenow = int(datetime.now().strftime("%H"))
+    if timenow >= start_time or timenow <= end_time:
+        threshx = threshold2
+    else:
+        threshx = threshold
+    return threshx
 if __name__ == '__main__':
     time_st = time()
     global terminate,imgCnt
@@ -76,7 +82,8 @@ if __name__ == '__main__':
     else:
        rtsp_url = urlx
     print ("motion detector in: %s" % rtsp_url)
-    print (' motion threshhold: ',threshold)
+    print ('motion threshhold: ',threshold,' night threshold: ',threshold2)
+    print ('Night threshold applies between',st_time,': 00 -> ',en_time,': 00')
     print("image scale:--->",perc,"%")
     cap=cv2.VideoCapture(rtsp_url)
     sleep(2.0) # stablise camera
@@ -105,7 +112,7 @@ if __name__ == '__main__':
                 break
             dif = diffImg(t_minus, t, t_plus)
             difSum = dif.sum()
-            
+            threshold = setthresh(st_time,en_time) #diff thresh in-between  
             if difSum > threshold:
                 if numFrames > 0 : # save a frame before the event
                     img_minus = imgResize(img_minus,perc)
@@ -113,7 +120,8 @@ if __name__ == '__main__':
                 img = imgResize(img,perc)
                 handleChange(img)
                 print(datetime.now().strftime("%d/%m %H:%M:%S"),\
-                      "MOTION DETECTED:-> Image",imgCnt," Saved")
+                      "MOTION DETECTED:-> Image",imgCnt," Saved at ",\
+                      threshold," threshold")
                 if numFrames > 0 : # save few frames after the event
                     postEvent(cap,numFrames,perc)
                     break          #restart after these frame captures

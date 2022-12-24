@@ -4,6 +4,7 @@ This software NVR is based on gilelias' excellent <a href="https://github.com/gi
 ### Demo
 https://youtu.be/R4qauQm8y-M
 ## What's New (in reverse chronological order)
+* Option to increase motion-detection sensitivity after dark.
 * Multiple cameras can be motion-detected with suitable mods to *cam??* filenames.
 * `crtl` can be used to control `driver.py` with *start|stop|restart* arguments.
 * `driver.py` added to make `detect.py` into a backgrounded-screen daemon, which can be started at boot through cron (e.g. `@reboot /home/saauser/bin/ctrl1 start`). 
