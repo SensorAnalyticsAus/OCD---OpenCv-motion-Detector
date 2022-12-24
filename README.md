@@ -20,7 +20,7 @@ https://youtu.be/R4qauQm8y-M
 ## Getting Started
 
 ### Prerequisites
-* raspberry pi 3 or there abouts
+* raspberry pi zero w or better
 * python 3
 * based on opencv-python
 * Optional: For accessing rtsp stream with udp transport remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
