@@ -69,6 +69,7 @@ def setthresh(start_time,end_time):
     else:
         threshx = threshold
     return threshx
+
 if __name__ == '__main__':
     time_st = time()
     global terminate,imgCnt
@@ -84,6 +85,7 @@ if __name__ == '__main__':
     print ("motion detector in: %s" % rtsp_url)
     print ('motion threshhold: ',threshold,' night threshold: ',threshold2)
     print ('Night threshold applies between',st_time,': 00 -> ',en_time,': 00')
+    print ('Current threshold:',setthresh(st_time,en_time))
     print("image scale:--->",perc,"%")
     cap=cv2.VideoCapture(rtsp_url)
     sleep(2.0) # stablise camera
