@@ -23,7 +23,7 @@ https://youtu.be/sBTi22CeHho
 * raspberry pi zero w or better
 * python 3
 * based on opencv-python
-* Optional: For accessing rtsp stream with udp transport remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
+* Work-around for accessing a rtsp stream with udp transport only remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
 
 Rmember to pip install/upgrade numpy before installing opencv.
 ```
