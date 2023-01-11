@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 from datetime import datetime
 from time import gmtime, strftime, time, sleep
-from config import url,username,password,channel,threshold,urlx,numFrames,\
+from config import url,username,password,channel,threshold1,urlx,numFrames,\
      perc,tsok,dlim,dfreq,dpath,dday,showvid,threshold2,st_time,en_time
 from sautils import saoldestFile,sadiskUse,sadiskManage
 import signal,os,sys
@@ -67,7 +67,7 @@ def setthresh(start_time,end_time):
     if timenow >= start_time or timenow <= end_time:
         threshx = threshold2
     else:
-        threshx = threshold
+        threshx = threshold1
     return threshx
 
 if __name__ == '__main__':
@@ -83,7 +83,7 @@ if __name__ == '__main__':
     else:
        rtsp_url = urlx
     print ("motion detector in: %s" % rtsp_url)
-    print ('motion threshhold: ',threshold,' night threshold: ',threshold2)
+    print ('motion threshhold: ',threshold1,' night threshold: ',threshold2)
     print ('Night threshold applies between',st_time,': 00 -> ',en_time,': 00')
     print ('Current threshold:',setthresh(st_time,en_time))
     print("image scale:--->",perc,"%")
