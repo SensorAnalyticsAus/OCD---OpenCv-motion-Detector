@@ -26,7 +26,7 @@ https://youtu.be/sBTi22CeHho
 * Optional: For accessing rtsp stream with udp transport remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
 
 ```
-pip install opencv-python
+pip install opencv-python [pip install/upgrade numpy before this step]
 sudo apt update
 sudo apt upgrade
 sudo apt install screen
