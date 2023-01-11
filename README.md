@@ -27,6 +27,9 @@ https://youtu.be/sBTi22CeHho
 
 ```
 pip install opencv-python
+sudo apt update
+sudo apt upgrade
+sudo apt install screen
 ```
 
 ### config
