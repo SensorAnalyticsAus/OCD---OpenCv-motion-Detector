@@ -6,7 +6,7 @@ from datetime import datetime
 from time import gmtime, strftime, time, sleep
 from config import url,username,password,channel,threshold1,urlx,numFrames,\
      perc,tsok,dlim,dfreq,dpath,dday,showvid,threshold2,st_time,en_time
-from sautils import saoldestFile,sadiskUse,sadiskManage
+from saUtils import saoldestFile,sadiskUse,sadiskManage
 import signal,os,sys
 
 def diffImg(t0, t1, t2):
@@ -95,20 +95,16 @@ if __name__ == '__main__':
     else:
        print("Camera is ready to capture motion \n1>\n2>\n3> Go\n")
 
-    while(True):
-        if terminate:
-            print("Oh-o gotta go outer...")
-            break
-        # Read three images first:
-        print("Re/Initialising with three images:")
-        img_minus = cap.read()[1]
-        img = cap.read()[1]
-        img_plus = cap.read()[1]
+    # Read three images first:
+    print("Re/Initialising with three images:")
+    img_minus = cap.read()[1]
+    img = cap.read()[1]
+    img_plus = cap.read()[1]
 
-        t_minus = cv2.cvtColor(img_minus, cv2.COLOR_RGB2GRAY)
-        t = cv2.cvtColor(np.copy(img), cv2.COLOR_RGB2GRAY)
-        t_plus = cv2.cvtColor(img_plus, cv2.COLOR_RGB2GRAY)
-        while(True):
+    t_minus = cv2.cvtColor(img_minus, cv2.COLOR_RGB2GRAY)
+    t = cv2.cvtColor(np.copy(img), cv2.COLOR_RGB2GRAY)
+    t_plus = cv2.cvtColor(img_plus, cv2.COLOR_RGB2GRAY)
+    while(True):
             if terminate:
                 print("Oh-o gotta go inner...")
                 break
