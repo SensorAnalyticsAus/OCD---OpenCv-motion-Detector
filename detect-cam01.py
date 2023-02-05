@@ -6,7 +6,7 @@ from datetime import datetime
 from time import gmtime, strftime, time, sleep
 from config import url,username,password,channel,threshold1,urlx,numFrames,\
      perc,tsok,dlim,dfreq,dpath,dday,showvid,threshold2,st_time,en_time
-from saUtils import saoldestFile,sadiskUse,sadiskManage
+from sautils import saoldestFile,sadiskUse,sadiskManage
 import signal,os,sys
 
 def diffImg(t0, t1, t2):
