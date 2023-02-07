@@ -1,6 +1,6 @@
 # OCD Motion Detection NVR 2
 
-This software allows security and web cams to detect and save motion events into a personal cloud. This cloud storage can be used for <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. Tested with Tapo, Sricam, PiCam, and Macbook Pro cameras.
+This software allows security and web cams to save motion images into a personal cloud. This cloud storage can be used for <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. Tested with Tapo, Sricam, PiCam, and Macbook Pro cameras.
 
 ### Demos
 * https://youtu.be/SsAoOSjJwRs
