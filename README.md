@@ -23,7 +23,7 @@ This software allows security and web cams to detect and save motion events into
 ## Getting Started
 
 ### Prerequisites
-* raspberry pi zero w or better
+* raspberry pi or any debian linux/mac (windows with cygwin may be - not tested)
 * python 3
 * based on opencv-python
 * Work-around for accessing a rtsp stream with udp transport only remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
