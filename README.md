@@ -6,7 +6,7 @@ This software allows security and web cams to detect and save motion events into
 * https://youtu.be/SsAoOSjJwRs
 * https://youtu.be/sBTi22CeHho
 ## What's New (in reverse chronological order)
-* Version 2 implements an updated motion detection scheme [^*], which is more accurate and sensitive in low-light conditions.
+* Version 2 implements an updated motion detection scheme [^1], which is more accurate and sensitive in low-light conditions.
 * Option to increase motion-detection sensitivity after dark.
 * Multiple cameras can be motion-detected with suitable mods to *cam??* filenames.
 * `crtl` can be used to control `driver.py` with *start|stop|restart* arguments.
@@ -55,4 +55,4 @@ To stop:
 ### NB:
 Please delete the background estimate 'img_bg.png' after changing the camera/video capture resolution (it's camera sensor size dependent).
 
-[^*]: Credit Adrian Rosebrock (https://pyimagesearch.com/author/adrian/)                on September 2, 2019
+[^1]: Credit Adrian Rosebrock (https://pyimagesearch.com/author/adrian/)                on September 2, 2019
