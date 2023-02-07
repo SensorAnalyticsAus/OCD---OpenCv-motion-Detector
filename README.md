@@ -3,8 +3,8 @@
 This software allows security and web cams to detect and save motion events into a personal cloud. This cloud storage can be used for <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> on personal computers. Tested with Tapo, Sricam, PiCam, and Macbook Pro cameras.
 
 ### Demos
-https://youtu.be/SsAoOSjJwRs
-https://youtu.be/sBTi22CeHho
+* https://youtu.be/SsAoOSjJwRs
+* https://youtu.be/sBTi22CeHho
 ## What's New (in reverse chronological order)
 * Version 2 implements an updated motion detection scheme [^1], which is more accurate and sensitive in low-light conditions.
 * Option to increase motion-detection sensitivity after dark.
