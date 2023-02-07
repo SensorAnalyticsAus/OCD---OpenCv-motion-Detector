@@ -3,8 +3,8 @@
 # Utility to create a timelapse video from images saved by the opencv motion
 # detector within any user defined time range. 
 
-IMGPATH=/from/cam01/images # Replace with actual path to motion-detected images
-MOVPATH=/to/CAM01_MOVIE # Replace with actual path to save the output movie
+IMGPATH=./images # Replace with actual path to motion-detected images
+MOVPATH=./       # Replace with actual path to save the output movie
 TMPD=/tmp/tmpcam01 # Or anyother writeable path
 MOV=cam01-range # OR anyother name for th output movie
 

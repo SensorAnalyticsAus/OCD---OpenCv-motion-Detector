@@ -1,9 +1,12 @@
-# OCD Motion Detection NVR
+# OCD Motion Detection NVR version 2
 
-This software NVR is based on gilelias' excellent <a href="https://github.com/gilelias/rtsp-motion">POC using opencv to detect motion in rtsp stream</a>. This implementation converts a SDCard based motion recording ip cam or a basic usb cam into a fully featured ip cam with online access to motion events and option to perform <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a>. Tested with Tapo, Sricam, PiCam, and Macbook Pro builtin camera.
-### Demo
+This software allows security and web cams to detect and save motion events into a personal cloud. This cloud storage can be used for <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> on personal computers. Tested with Tapo, Sricam, PiCam, and Macbook Pro cameras.
+
+### Demos
+https://youtu.be/SsAoOSjJwRs
 https://youtu.be/sBTi22CeHho
 ## What's New (in reverse chronological order)
+* Version 2 implements an updated motion detection scheme [^1], which is more accurate and sensitive in low-light conditions.
 * Option to increase motion-detection sensitivity after dark.
 * Multiple cameras can be motion-detected with suitable mods to *cam??* filenames.
 * `crtl` can be used to control `driver.py` with *start|stop|restart* arguments.
@@ -40,7 +43,7 @@ Edit the config file according to your configuration
 
 ## Running the code
 
-Just execute ctrl after changing its `RPATH` to your path to this repo (Remember to edit `config.py` first).
+Just execute ctrl after changing its `RPATH` to your path to this repo (Remember to edit `config2.py` first).
 ```
 ./ctrl-cam01.sh start
 ```
@@ -48,3 +51,8 @@ To stop:
 ```
 ./ctrl-cam01.sh stop
 ```
+
+### NB:
+Please delete the background estimate 'img_bg.png' after changing the camera/video capture resolution (it's camera sensor size dependent).
+
+[^1]: Credit Adrian Rosebrock (https://pyimagesearch.com/author/adrian/)                on September 2, 2019
