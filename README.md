@@ -1,6 +1,6 @@
 # OCD2 Motion Detection NVR
 
-OCD2 saves its motion-detected images into a personal cloud. This cloud storage can be used for computer screen based viewing, <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. Tested with Tapo, Sricam, PiCam, and Macbook Pro cameras.
+OCD2 converts any basic computer into a personal cloud for saving its motion-detected images. This cloud storage can be used for image searching, making daily video summaries, <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. Tested with Tapo, Sricam, PiCam, and Macbook Pro cameras.
 
 ### Demos
 * https://youtu.be/SsAoOSjJwRs
