@@ -1,4 +1,4 @@
-# OCD2 Motion Detection NVR
+# OCD2 Simple Motion Detection NVR
 
 OCD2 is a software network video recorder with powerful motion-detection, which can use any basic computer as a personal cloud for saving its motion-detected images. This cloud storage can be used for image searching, making daily video summaries, <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. Tested with Tapo, Sricam, PiCam, and Macbook Pro cameras.
 
@@ -6,7 +6,7 @@ OCD2 is a software network video recorder with powerful motion-detection, which 
 * https://youtu.be/SsAoOSjJwRs
 * https://youtu.be/sBTi22CeHho
 ## What's New (in reverse chronological order)
-* Version 2 implements an updated motion detection scheme [^1], which is more accurate and sensitive in low-light conditions.
+* Version 2 has an updated motion detection scheme [^1], which is more accurate and works better in low-light conditions.
 * Option to increase motion-detection sensitivity after dark.
 * Multiple cameras can be motion-detected with suitable mods to *cam??* filenames.
 * `crtl` can be used to control `driver.py` with *start|stop|restart* arguments.
