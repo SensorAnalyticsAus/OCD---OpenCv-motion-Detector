@@ -2,7 +2,7 @@
 
 RPATH=./
 SCRNM=cam01
-PROGNM=driver2-cam01.py
+PROGNM=driver3-cam01.py
 TS=$(date +%Y%m%d_%H:%M:%S)
 
 i=0

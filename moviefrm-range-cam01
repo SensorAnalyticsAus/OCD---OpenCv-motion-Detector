@@ -1,0 +1,38 @@
+#!/bin/bash
+
+IMGPATH=./images
+MOVPATH=./
+TMPD=/tmp/tapo1_range
+MOV=cam01-range
+
+if [ -d "$TMPD" ] 
+then
+ rm -rf $TMPD/*
+else
+ mkdir -p $TMPD
+fi 
+
+if [[ $# == 5 ]];then
+ find $IMGPATH -newermt "$2 $3" ! -newermt "$4 $5" -type f -exec cp {} $TMPD \;
+elif [[ $# == 4 ]]; then
+ find $IMGPATH -newermt "$2 $3" ! -newermt "$2 $4" -type f -exec cp {} $TMPD \;
+else
+ echo "usage  FR YYYYMMDD HH:MM[:SS] [YYYYMMDD] HH:MM[:SS]"
+ exit 1
+fi
+
+if [ $? -ne 0 ] ; then
+ exit
+fi
+
+echo `ls $TMPD | wc -l` files found
+read -p "Are you sure? (y/n) " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
+ffmpeg -y -framerate $1 -pattern_type glob -i "$TMPD/img*.jpg" \
+  -c:v libx264 -pix_fmt yuv420p $MOVPATH/$MOV.mp4 
+ echo "jpg --> $MOVPATH/$MOV.mp4"
