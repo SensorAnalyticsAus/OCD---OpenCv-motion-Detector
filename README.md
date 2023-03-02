@@ -32,6 +32,7 @@ Remember to pip install numpy before installing opencv.
 python -m pip install -U pip
 python -m pip install -U scikit-image 
 pip install opencv-python
+pip install shutils
 
 sudo apt update
 sudo apt upgrade
