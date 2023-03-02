@@ -15,7 +15,7 @@ OCD3 is a software network video recorder with low-light motion-detection. It ca
 * Option to increase motion-detection sensitivity after dark.
 * Multiple cameras can be motion-detected with suitable mods to *cam??* filenames.
 * `crtl3-cam01` can be used to control `driver3-cam01.py` with *start|stop|restart* arguments e.g. `crontab -e` with line, `@reboot /home/saauser/bin/ctrl-cam01 start`). 
-* A rpi4b with internal SSD (<a href="https://www.amazon.com/Argon-Raspberry-Support-B-Key-Compatible/dp/B08MJ3CSW7/ref=sr_1_1_sspa?crid=16TYRP9YTSGYD&keywords=argon+one+m.2+case+for+raspberry+pi+4&qid=1677735790&sprefix=argon+one+%2Caps%2C313&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzQVRBTE5DME1BQjc5JmVuY3J5cHRlZElkPUEwMTUzMzY1MVRGSlpHV0lVVU9PUyZlbmNyeXB0ZWRBZElkPUEwNzk1MzYzMjdRNDBLUUpSVDk4TyZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=argon"> argon one M2</a>. enclosure) can support four camera streams quite easily.
+* A rpi4b with internal SSD (<a href="https://www.amazon.com/Argon-Raspberry-Support-B-Key-Compatible/dp/B08MJ3CSW7/ref=sr_1_1_sspa?crid=16TYRP9YTSGYD&keywords=argon+one+m.2+case+for+raspberry+pi+4&qid=1677735790&sprefix=argon+one+%2Caps%2C313&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzQVRBTE5DME1BQjc5JmVuY3J5cHRlZElkPUEwMTUzMzY1MVRGSlpHV0lVVU9PUyZlbmNyeXB0ZWRBZElkPUEwNzk1MzYzMjdRNDBLUUpSVDk4TyZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=argon"> argon one M2</a>. enclosure) can support three camera streams quite easily.
 * Version 1 has even less resource requirements and almost as good (most of my less-critical cameras still use it).
 
 ## Getting Started
