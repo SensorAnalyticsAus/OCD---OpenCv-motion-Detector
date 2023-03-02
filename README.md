@@ -1,4 +1,4 @@
-# OCD2 Simple Motion Detection NVR
+# OCD Simple Motion Detection NVR
 
 ## About
 OCD3 is a software network video recorder with low-light motion-detection. It can use any basic computer as a personal cloud for saving motion-detected images. Its outputs can also be used for image searching, making event summary videos, <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras.
