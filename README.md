@@ -40,7 +40,7 @@ sudo apt install screen
 
 ### config3
 
-Edit 'config3.py' file according to your requirements. If in doubt retain default values where appropriate.
+Edit `config3.py` file according to your requirements. If in doubt retain default values where appropriate.
 
 
 ## Running the code
