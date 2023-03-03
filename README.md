@@ -37,6 +37,7 @@ pip install shutils
 sudo apt update
 sudo apt upgrade
 sudo apt install screen
+sudo apt install ffmpeg
 ```
 
 ### config3
