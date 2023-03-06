@@ -22,9 +22,9 @@ then
  echo "$MOVPATH does not exist - edit in correct path"
  exit 1
 fi
-if [ ! -d $TMPD ]
+if [ ! -d $(dirname "$TMPD") ]
 then
- echo "$TMPD does not exist - edit in correct path"
+ echo "$(dirname "$TMPD") does not exist - edit in correct path"
  exit 1
 fi
 
