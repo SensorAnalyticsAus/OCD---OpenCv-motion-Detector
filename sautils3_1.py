@@ -178,6 +178,17 @@ def calcEntropy(imgpath):
     else: img1 = img.copy()
     entropy = skimage.measure.shannon_entropy(img1)
     return entropy
+def genRows(filePath,dt_st,dt_en): # path to MD.log,frm: YYYYMMDD,to: YYYYMMDD
+    prefix = './images/img_'
+    ct = len(prefix) #slice st
+    ct2 = len(prefix)+8 #slice end
+    with open(filePath) as f:
+        for line in f:
+            dt = line[ct:ct2]
+            tm = line[ct2+1:ct2+7]
+            dtm = int(dt + tm) 
+            if dtm >= dt_st and dtm <= dt_en:
+                yield line
 
 if __name__ == '__main__':
 

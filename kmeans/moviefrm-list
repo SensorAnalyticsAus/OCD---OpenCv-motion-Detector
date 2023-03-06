@@ -1,0 +1,57 @@
+#!/bin/bash
+
+FILPATH=./ffnames.txt
+MOVPATH=/mnt/SSD/MOVIE
+MOV=`basename $FILPATH .txt`
+TMPD=/mnt/SSD/tmp/$MOV
+
+if [ $# == 0 ] 
+then
+ echo "usage FrameRate [ImgFileListName]"
+ exit 1
+else
+ FR=$1
+fi
+if [ $# == 2 ]
+then
+ FILPATH=$2
+fi
+
+if [ ! -d $MOVPATH ]
+then
+ echo "$MOVPATH does not exist - edit in correct path"
+ exit 1
+fi
+if [ ! -d $TMPD ]
+then
+ echo "$TMPD does not exist - edit in correct path"
+ exit 1
+fi
+
+if [[ -d "$TMPD" || -f "$TMPD" ]]
+then
+ rm -rf $TMPD
+fi
+
+mkdir -p $TMPD
+echo "$TMPD re-created"
+
+cat $FILPATH | xargs cp -t $TMPD 
+
+echo "Files: `ls $TMPD | wc -l` Copied to $TMPD"
+echo `ls $TMPD | wc -l` files found
+read -p "Continue? (y/n) " -n 1 -r
+echo
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    exit 1
+fi
+
+echo "Ready to start movie making"
+cd $TMPD
+sleep 5 #time to see the above echoes"
+
+cat *.jpg    | ffmpeg -f image2pipe -r $FR -vcodec \
+    mjpeg -i - -vcodec libx264 $MOVPATH/$MOV.mp4 -y
+
+echo "jpg --> $MOVPATH/$MOV"
