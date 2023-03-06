@@ -1,4 +1,4 @@
-`ctrl-cam01` then wait until at least 100  lines appear in `../log/MG.log`.
+`../ctrl-cam01.sh start` and wait until at least 100  lines appear in `../log/MG.log`.
 
 ## Example
 
