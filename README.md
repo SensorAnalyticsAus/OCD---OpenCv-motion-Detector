@@ -10,6 +10,7 @@ OCD3 is a software network video recorder with low-light motion-detection. It ca
 ## What's New (in reverse chronological order)
 * Bug fixes.
 * Version 3 has an updated motion detection scheme, which is more accurate and works better in low-light conditions.
+* A heuristic to minimise excessive frame capture.
 * `MD.log` for KMeans clustering.
 * `images_cn/` for saving contoured b/w versions of motion-detected images. Handy to know what caused motion-detection and where it occurred. 
 * Option to increase motion-detection sensitivity after dark.
