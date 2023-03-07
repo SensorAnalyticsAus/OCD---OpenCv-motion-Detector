@@ -6,6 +6,12 @@ FR=15
 PROG=/mnt/SSD/ocd_tapo1/kmeans
 MOVPATH=/mnt/SSD/MOVIE
 
+if [ ! -d "$PROG" ] || [ ! -d "$MOVPATH" ]
+then
+   echo "dir path/s do not exist!"
+   exit 1
+fi
+
 echo "program ran at $(date '+%Y-%m-%d %H:%M:%S')" 
 
 cd $PROG
@@ -22,3 +28,4 @@ python ./predict-km.py $PERC
 ./moviefrm-list-ni $FR
 
 mv $MOVPATH/ffnames.mp4 $MOVPATH/ffnames-$FD.mp4
+echo "$MOVPATH/ffnames-$FD.mp4 saved"

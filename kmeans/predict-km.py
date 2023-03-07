@@ -16,6 +16,7 @@ import pickle
 
 if not os.path.exists(prefixP):
     print('path',prefixP,'does not exist! fix prefixP')
+    sys.exit(1)
 
 fnames = np.loadtxt('fnames.txt',dtype=str)
 print('fnames loaded:',len(fnames),'lines')
