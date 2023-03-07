@@ -1,15 +1,21 @@
 #!/usr/bin/python
 
-import sys
+prefixF = './images/'
+prefixP = '/mnt/SSD/ocd_tapo1/images/'
+
+import sys,os
 if len(sys.argv) != 2:
     print('USAGE: -i|perc')
     print('-i: to run interactively')
-    print('perc: select clusters <= percentile (usually 20-80)')    
+    print('perc: select clusters lte <= percentile: (usually 20-80)')    
     sys.exit(1)
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.cluster import KMeans
 import pickle
+
+if not os.path.exists(prefixP):
+    print('path',prefixP,'does not exist! fix prefixP')
 
 fnames = np.loadtxt('fnames.txt',dtype=str)
 print('fnames loaded:',len(fnames),'lines')
@@ -34,8 +40,6 @@ for i in range(0,nC):
     print(mCs[i],' ',end='')
 print('\n')
 
-prefixF = './images/'
-prefixP = '/mnt/SSD/ocd_tapo1/images/'
 ffnames = [] # to store full path (which exceeds fnames array elem size)
 
 f = open('ffnames.txt','w')

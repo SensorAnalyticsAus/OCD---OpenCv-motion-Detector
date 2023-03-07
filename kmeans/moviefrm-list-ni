@@ -1,4 +1,5 @@
 #!/bin/bash
+# Non-interactive version for daily-driver
 
 DIRP=/mnt/SSD
 FILPATH=./ffnames.txt
@@ -41,12 +42,7 @@ cat $FILPATH | xargs cp -t $TMPD
 
 echo "Files: `ls $TMPD | wc -l` Copied to $TMPD"
 echo `ls $TMPD | wc -l` files found
-read -p "Continue? (y/n) " -n 1 -r
 echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]
-then
-    exit 1
-fi
 
 echo "Ready to start movie making"
 cd $TMPD

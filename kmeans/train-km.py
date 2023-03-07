@@ -61,7 +61,7 @@ if opt == 0:
     sys.exit(0)
 ################### KMeans Block ################################
 print('ready to train KMeans with:',nC,'clusters')
-km = KMeans(n_clusters=nC)
+km = KMeans(n_clusters=nC,n_init=10) #to get rid of warning
 km.fit(dataNormed)
 pickle.dump(km, open(mname, 'wb')) # dump trained model
 print('KMeans trained model saved as:',mname)

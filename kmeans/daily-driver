@@ -1,0 +1,24 @@
+#!/bin/bash
+
+NumC=10
+PERC=80
+FR=15
+PROG=/mnt/SSD/ocd_tapo1/kmeans
+MOVPATH=/mnt/SSD/MOVIE
+
+echo "program ran at $(date '+%Y-%m-%d %H:%M:%S')" 
+
+cd $PROG
+
+arg=12
+DT_ST=$(date +%Y%m%d%H%M%S -d "$arg hours ago")
+DT_EN=$(date +%Y%m%d%H%M%S)
+
+FD=$(date +%a-%H)
+
+python ./train-km.py 1 $NumC $DT_ST $DT_EN
+python ./predict-km.py $PERC
+
+./moviefrm-list-ni $FR
+
+mv $MOVPATH/ffnames.mp4 $MOVPATH/ffnames-$FD.mp4
