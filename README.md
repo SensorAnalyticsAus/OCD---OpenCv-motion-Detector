@@ -4,7 +4,7 @@
 OCD3 is a software network video recorder. Key features: 
 * low-light motion-detection, 
 * false-positive motion alert reduction,
-* AI summation of daily events. 
+* AI summation of daily events (kmeans folder). 
 
 It can use any basic computer as a personal cloud for saving and displaying motion-detected images, videos etc. Outputs can also be used in custom image searching programs e.g. making event summary videos, gathering event stats <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. 
 
