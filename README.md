@@ -31,7 +31,7 @@ Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is
 ### Prerequisites
 * raspberry pi 4b or a debian linux/mac PC (windows with cygwin may work - not tested)
 * python 3.6 or higher
-* Work-around for accessing a rtsp stream with udp transport only remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
+* work-around for accessing a rtsp stream with udp transport only remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
 
 Remember to pip install numpy before installing opencv.
 
@@ -68,6 +68,7 @@ screen -r cam01
 ctrl-a-d (to exit)
 ```
 ## Troubleshooting
-There are really only two main reasons for program to not start. 
+There are really only three main reasons for program not working. 
+* Incorrect camera url or camera is not working. Suggest testing camera url with VLC.
 * A python dependency is missing.
 * A program path is not correctly specified.
