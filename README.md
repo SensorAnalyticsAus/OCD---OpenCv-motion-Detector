@@ -8,7 +8,7 @@ OCD3 is a software network video recorder. Key features:
 
 It can use any basic computer as a personal cloud for saving and displaying motion-detected images, videos etc. Outputs can also be used in custom image searching programs e.g. making event summary videos, gathering event stats <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. 
 
-Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program works fine as long as python dependencies are installed (see below) and program path have been correctly specified. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements.
+Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is quite stable once started - can run for months uninterrupted. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements.
 
 ### Demos
 * <a href="https://youtu.be/SsAoOSjJwRs">OCD2 night vision</a>
@@ -67,3 +67,7 @@ To check on program
 screen -r cam01
 ctrl-a-d (to exit)
 ```
+## Troubleshooting
+There are really only two main reasons for program to not start. 
+* A python dependency is missing.
+* A program path is not correctly specified.
