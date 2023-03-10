@@ -1,7 +1,14 @@
 # OCD Simple Motion Detection NVR
 
 ## About
-OCD3 is a software network video recorder with low-light motion-detection. It can use any basic computer as a personal cloud for saving motion-detected images. Its outputs can also be used for image searching, making event summary videos, <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras.
+OCD3 is a software network video recorder. Key features: 
+* low-light motion-detection, 
+* false-positive motion alert reduction,
+* AI summation of daily events. It can use any basic computer as a personal cloud for saving motion-detected images. 
+
+Outputs can also be used in custom image searching programs e.g. making event summary videos, gathering event stats <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. 
+
+Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program works fine as long as python dependencies are installed (see below) and program path have been correctly specified. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements.
 
 ### Demos
 * <a href="https://youtu.be/SsAoOSjJwRs">OCD2 night vision</a>
@@ -22,9 +29,8 @@ OCD3 is a software network video recorder with low-light motion-detection. It ca
 ## Getting Started
 
 ### Prerequisites
-* raspberry pi or any debian linux/mac (windows with cygwin may be - not tested)
+* raspberry pi 4b or a debian linux/mac PC (windows with cygwin may work - not tested)
 * python 3.6 or higher
-* based on opencv-python
 * Work-around for accessing a rtsp stream with udp transport only remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
 
 Remember to pip install numpy before installing opencv.
