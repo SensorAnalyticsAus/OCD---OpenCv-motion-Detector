@@ -40,6 +40,7 @@ python -m pip install -U pip
 python -m pip install -U scikit-image 
 pip install opencv-python
 pip install shutils
+pip install -U scikit-learn (for kmeans)
 
 sudo apt update
 sudo apt upgrade
