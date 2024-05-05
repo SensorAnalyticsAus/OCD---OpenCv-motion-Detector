@@ -1,5 +1,8 @@
 #!/usr/bin/python
-
+###############################################################################
+#           OpenCV MOTION DETECTOR Sensor Code for RaspberryPi 
+#                      Sensor Analytics™ Australia 2024
+###############################################################################
 import cv2
 import time,signal,os
 from datetime import datetime
