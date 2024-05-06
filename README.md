@@ -10,7 +10,7 @@ It can use any basic computer as a personal cloud for saving and displaying moti
 
 Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is quite stable once started - can run for months uninterrupted. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements. 
 
-${\color{red}NB}$ :
+${\textfs{\color{red}NB}}$ :
 Image Classification codes in `kmeans/`are RaspberryPi OS specif and may require editing some paths.
 
 ### Demos
