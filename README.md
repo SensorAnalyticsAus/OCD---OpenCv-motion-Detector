@@ -15,7 +15,7 @@ Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is
 * <a href="https://youtu.be/sBTi22CeHho">OCD night vision</a>
 
 ## What's New (in reverse chronological order)
-* `sautils` updated to ver 3.2. A major big in `kmeans` which restricted the use of image classification to Tapo camera filename format has been relaxed. Now any filename which contains timestamp as YYYYMMDD-HHMMSS will work.
+* `sautils` updated to ver 3.2. A major bug in `kmeans` which restricted the use of image classification to Tapo camera filename format has been relaxed. Now any filename which contains timestamp as YYYYMMDD-HHMMSS will work.
 * Bug fixes.
 * Version 3 has an updated motion detection scheme, which is more accurate and works better in low-light conditions.
 * A heuristic to minimise excessive frame capture.
