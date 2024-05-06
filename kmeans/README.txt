@@ -1,3 +1,5 @@
+NB This code is RaspberryPI OS specif
+
 Example
 
 Step 1 train
