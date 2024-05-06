@@ -8,13 +8,14 @@ OCD3 is a software network video recorder. Key features:
 
 It can use any basic computer as a personal cloud for saving and displaying motion-detected images, videos etc. Outputs can also be used in custom image searching programs e.g. making event summary videos, gathering event stats <a href="https://github.com/SensorAnalyticsAus/S-Big_Visual_Analytics"> video analytics </a> and much more. 
 
-Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is quite stable once started - can run for months uninterrupted. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements.
+Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is quite stable once started - can run for months uninterrupted. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements. <br>NB: Image Classification codes in `kmeans/`are RaspberryPi OS specif and may require editing the path.
 
 ### Demos
 * <a href="https://youtu.be/SsAoOSjJwRs">OCD2 night vision</a>
 * <a href="https://youtu.be/sBTi22CeHho">OCD night vision</a>
 
 ## What's New (in reverse chronological order)
+* `sautils` updated to ver 3.2. A major big in `kmeans` which restricted the use of image classification to Tapo camera filename format has been relaxed. Now any filename which contains timestamp as YYYYMMDD-HHMMSS will work.
 * Bug fixes.
 * Version 3 has an updated motion detection scheme, which is more accurate and works better in low-light conditions.
 * A heuristic to minimise excessive frame capture.
