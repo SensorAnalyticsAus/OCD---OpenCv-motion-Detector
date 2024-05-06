@@ -1,4 +1,8 @@
 #!/usr/bin/python
+###############################################################################
+#           OpenCV MOTION DETECTOR Sensor Code for RaspberryPi 
+#                      Sensor Analytics™ Australia 2024
+###############################################################################
 
 import shutil,os,glob,time,datetime,sys
 from subprocess import Popen, check_output, STDOUT, CalledProcessError,\
@@ -7,6 +11,7 @@ from pathlib import Path
 import cv2
 import numpy as np
 import skimage.measure
+import re
 
 #########################################################################
 
@@ -179,17 +184,17 @@ def calcEntropy(imgpath):
     entropy = skimage.measure.shannon_entropy(img1)
     return entropy
 def genRows(filePath,dt_st,dt_en): # path to MD.log,frm: YYYYMMDD,to: YYYYMMDD
-    prefix = './images/img_'
-    ct = len(prefix) #slice st
-    ct2 = len(prefix)+8 #slice end
     with open(filePath) as f:
         for line in f:
-            dt = line[ct:ct2]
-            tm = line[ct2+1:ct2+7]
-            dtm = int(dt + tm) 
-            if dtm >= dt_st and dtm <= dt_en:
+            dtm = fileDt(line) 
+            if int(dtm) >= int(dt_st) and int(dtm) <= int(dt_en):
                 yield line
-
+def fileDt(fname): # searches YYYYMMDD-HHMMSS in filename rets YYYYMMDDHHMMSS
+ s=re.search("([0-9]{4}[0-9]{2}[0-9]{2}\-[0-9]{6})",fname)
+ d=s.group(0)
+ d=d.replace('-','')
+ return(d)
+           
 if __name__ == '__main__':
 
 

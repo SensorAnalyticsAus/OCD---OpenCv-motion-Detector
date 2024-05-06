@@ -6,7 +6,7 @@
 import cv2
 import time,signal,os
 from datetime import datetime
-from sautils3 import saMotionDetect,imgResize,makeDir,handleChange,setthresh,\
+from sautils3_2 import saMotionDetect,imgResize,makeDir,handleChange,setthresh,\
      sadiskUse,saoldestFile,sadiskManage,calcEntropy
 from config3 import showvid,cmaxMinD,cmaxInc,cmaxDec,bWt,nIter,tsok,Perc,\
      night_st,day_st,iPx_night,iPx_day,cWidth,dpath,dfreq,dday,dlim,markcnt,\

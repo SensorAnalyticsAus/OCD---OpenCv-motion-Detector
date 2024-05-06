@@ -11,7 +11,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 import pickle
 import matplotlib.pyplot as plt
-from sautils3_1 import genRows
+from sautils3_2 import genRows
 import matplotlib
 import os
 

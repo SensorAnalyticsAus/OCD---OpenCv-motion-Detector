@@ -1,3 +1,5 @@
+## NB This code is RaspberryPI OS specif
+
 `../ctrl-cam01.sh start` and wait until at least 100  lines appear in `../log/MG.log`.
 
 ## Example

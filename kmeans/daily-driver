@@ -3,8 +3,8 @@
 NumC=10
 PERC=80
 FR=15
-PROG=/mnt/SSD/ocd_tapo1/kmeans
-MOVPATH=/mnt/SSD/MOVIE
+PROG=./
+MOVPATH=./
 
 if [ ! -d "$PROG" ] || [ ! -d "$MOVPATH" ]
 then

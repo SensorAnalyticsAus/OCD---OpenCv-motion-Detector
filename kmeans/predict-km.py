@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 prefixF = './images/'
-prefixP = '/mnt/SSD/ocd_tapo1/images/'
+prefixP = '../images/'
 
 import sys,os
 if len(sys.argv) != 2:

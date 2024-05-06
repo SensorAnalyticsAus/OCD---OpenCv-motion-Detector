@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DIRP=/mnt/SSD
+DIRP=.
 FILPATH=./ffnames.txt
 MOVPATH=$DIRP/MOVIE
 MOV=`basename $FILPATH .txt`
