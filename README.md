@@ -11,7 +11,7 @@ It can use any basic computer as a personal cloud for saving and displaying moti
 Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is quite stable once started - can run for months uninterrupted. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements. 
 
 ${\textsf{\color{red}NB}}$ :
-Bash shell scripts in `kmeans/`are RaspberryPi OS specif. Also some files may require editing paths.
+Bash shell scripts in `kmeans/`folder are RaspberryPi OS specif. Also some files in it may require editing paths.
 
 ### Demos
 * <a href="https://youtu.be/SsAoOSjJwRs">OCD2 night vision</a>
