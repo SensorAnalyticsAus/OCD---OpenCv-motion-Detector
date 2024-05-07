@@ -11,8 +11,7 @@ It can use any basic computer as a personal cloud for saving and displaying moti
 Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is quite stable once started - can run for months uninterrupted. Once the program starts up, program parameters e.g. motion sensitivity and disk use can be tailored to meet the site requirements. 
 
 ${\textsf{\color{red}NB}}$ :
-Bash shell scripts in `kmeans/`folder are RaspberryPi OS specif. Also some files in it may require editing paths.
-
+Bash shell scripts in `kmeans/`folder are RaspberryPi OS/Linux specif. Also some files in it may require editing paths at the top. Using these scripts on MacOS bash will need some tweaking. Alternatively `train-km.py` and `predict-km.py` produce `ffnames.txt` containing full paths to images selected by KMeans worth looking at over the user specified time window (`train-km.py` arg3 and arg4).
 ### Demos
 * <a href="https://youtu.be/SsAoOSjJwRs">OCD2 night vision</a>
 * <a href="https://youtu.be/sBTi22CeHho">OCD night vision</a>
