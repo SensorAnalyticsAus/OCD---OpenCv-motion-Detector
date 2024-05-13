@@ -4,8 +4,8 @@ PyPath=/home/saauser/.venv/bin
 NumC=10
 PERC=80
 FR=10
-PROG=/mnt/SSD/ocd3_tapo1/kmeans
-MOVPATH=/mnt/SSD/MOVIE
+PROG=/mnt/SSD/ocd3_cam01/kmeans
+MOVPATH=./MOVIE
 
 if [ ! -d $PROG ] || [ ! -d $MOVPATH ]
 then
