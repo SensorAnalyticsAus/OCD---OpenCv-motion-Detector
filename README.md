@@ -60,8 +60,6 @@ Edit `config3.py` file according to your requirements. If in doubt retain defaul
 Edit paths in the beginning of `ctrl3-cam01.sh`, `driver3-cam01.py` and `kmeans/daily-driver`
 
 ## Running the code
-
-Just execute ctrl3-cam01 after changing its `RPATH` to your path to this repo (Remember to edit `config3.py` first).
 ```
 ./ctrl3-cam01.sh start
 ```
