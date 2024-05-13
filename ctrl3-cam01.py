@@ -1,6 +1,7 @@
 #!/bin/bash -l
 
-RPATH=./
+PYPATH=/home/saauser/.venv/bin
+RPATH=/mnt/SSD/ocd3_cam01
 SCRNM=cam01
 PROGNM=driver3-cam01.py
 TS=$(date +%Y%m%d_%H:%M:%S)
@@ -20,7 +21,7 @@ case $1 in
      if pgrep -f "python ./$PROGNM"  > /dev/null 2>&1; then
         echo "[$TS] $PROGNM is already running"
      else
-        /usr/bin/screen -S $SCRNM -dm python ./$PROGNM
+        /usr/bin/screen -S $SCRNM -dm $PYPATH/python ./$PROGNM
         if [ $? = 0 ] ; then 
            echo "[$TS] $PROGNM started"
         else
@@ -57,7 +58,7 @@ case $1 in
      if pgrep -f "python ./$PROGNM"  > /dev/null 2>&1; then
         echo "[$TS] $PROGNM is already running"
      else
-        /usr/bin/screen -S $SCRNM -dm python ./$PROGNM
+        /usr/bin/screen -S $SCRNM -dm $PYPATH/python ./$PROGNM
         if [ $? = 0 ] ; then 
            echo "[$TS] $PROGNM started"
         else
@@ -65,6 +66,6 @@ case $1 in
         fi
      fi;;
   *)
-     echo "usage: tapo1 start|stop|restart"
+     echo "usage: cam01 start|stop|restart"
      exit 1;;
 esac

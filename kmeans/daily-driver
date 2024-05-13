@@ -1,12 +1,13 @@
 #!/bin/bash
 
+PyPath=/home/saauser/.venv/bin
 NumC=10
 PERC=80
-FR=15
-PROG=./
-MOVPATH=./
+FR=10
+PROG=/mnt/SSD/ocd3_tapo1/kmeans
+MOVPATH=/mnt/SSD/MOVIE
 
-if [ ! -d "$PROG" ] || [ ! -d "$MOVPATH" ]
+if [ ! -d $PROG ] || [ ! -d $MOVPATH ]
 then
    echo "dir path/s do not exist!"
    exit 1
@@ -22,8 +23,8 @@ DT_EN=$(date +%Y%m%d%H%M%S)
 
 FD=$(date +%a-%H)
 
-python ./train-km.py 1 $NumC $DT_ST $DT_EN
-python ./predict-km.py $PERC
+$PyPath/python ./train-km.py 1 $NumC $DT_ST $DT_EN
+$PyPath/python ./predict-km.py $PERC
 
 ./moviefrm-list-ni $FR
 

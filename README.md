@@ -17,6 +17,7 @@ Bash shell scripts in `kmeans/`folder are RaspberryPi OS/Linux specif. Also some
 * <a href="https://youtu.be/sBTi22CeHho">OCD night vision</a>
 
 ## What's New (in reverse chronological order)
+* Support for python virtual environment added.
 * `sautils` updated to ver 3.2. A major bug in `kmeans` which restricted the use of image classification to Tapo camera filename format has been relaxed. Now any filename which contains timestamp as YYYYMMDD-HHMMSS will generally work.
 * Bug fixes.
 * Version 3 has an updated motion detection scheme, which is more accurate and works better in low-light conditions.
@@ -44,6 +45,7 @@ python -m pip install -U scikit-image
 pip install opencv-python
 pip install shutils
 pip install -U scikit-learn (for kmeans)
+pip install matplotlib
 
 sudo apt update
 sudo apt upgrade
@@ -55,16 +57,17 @@ sudo apt install ffmpeg
 
 Edit `config3.py` file according to your requirements. If in doubt retain default values where appropriate.
 
+Edit paths in the beginning of `ctrl3-cam01.sh` and `driver3-cam01.py`
 
 ## Running the code
 
 Just execute ctrl3-cam01 after changing its `RPATH` to your path to this repo (Remember to edit `config3.py` first).
 ```
-./ctrl-cam01.sh start
+./ctrl3-cam01.sh start
 ```
 To stop:
 ```
-./ctrl-cam01.sh stop
+./ctrl3-cam01.sh stop
 ```
 To check on program
 ```
