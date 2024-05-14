@@ -58,7 +58,8 @@ sudo apt install ffmpeg
 Edit `config3.py` file according to your requirements. If in doubt retain default values where appropriate.
 
 Edit paths in the beginning of 
-```ctrl3-cam01.sh
+```
+ctrl3-cam01.sh
 driver3-cam01.py
 kmeans/predict-km.py
 kmeans/daily-driver
