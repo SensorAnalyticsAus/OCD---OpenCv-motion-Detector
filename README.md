@@ -53,7 +53,7 @@ sudo apt install screen
 sudo apt install ffmpeg
 ```
 
-### config3
+### Edit Settings
 
 Edit `config3.py` file according to your requirements. If in doubt retain default values where appropriate.
 
