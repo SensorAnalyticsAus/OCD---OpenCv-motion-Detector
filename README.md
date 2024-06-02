@@ -18,7 +18,7 @@ Bash shell scripts in `kmeans/`folder are RaspberryPi OS/Linux specif. Also some
 
 ## What's New (in reverse chronological order)
 * Support for python virtual environment added.
-* `sautils` updated to ver 3.2. A major bug in `kmeans` which restricted the use of image classification to Tapo camera filename format has been relaxed. Now any filename which contains timestamp as YYYYMMDD-HHMMSS will generally work.
+* `sautils` updated to ver 3.2. A major bug in `kmeans` which restricted the use of image classification to OCD camera filename format has been relaxed. Now any filename which contains timestamp as YYYYMMDD-HHMMSS will generally work.
 * Bug fixes.
 * Version 3 has an updated motion detection scheme, which is more accurate and works better in low-light conditions.
 * A heuristic to minimise excessive frame capture.
