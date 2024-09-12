@@ -3,6 +3,7 @@
 #           OpenCV MOTION DETECTOR Sensor Code for RaspberryPi 
 #                      Sensor Analytics Australia™ 2024
 ###############################################################################
+
 import cv2
 import time,signal,os
 from datetime import datetime
@@ -123,7 +124,7 @@ while(cap.isOpened()):
     k = k + 1 
     # disk management block
     time_end = time.time() 
-    if (time_end - time_st)/lfreq > 1: # program has run for lfreq secs
+    if (time_end - time_st)/lfreq > 1 and logg == 1: # program ran lfreq secs
        f.flush() # output the logfile to disk
     if (time_end - time_st)/dfreq > 1: # program has run for dfreq secs 
         mt_raw = saoldestFile(dpath)
@@ -148,6 +149,6 @@ while(cap.isOpened()):
         time_st = time_end # advance start time    
     #time.sleep(0.1) # end while
 
-f.close()
+if logg == 1: f.close()
 cap.release()
 cv2.destroyAllWindows()
