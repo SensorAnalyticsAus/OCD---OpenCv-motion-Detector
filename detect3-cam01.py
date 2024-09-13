@@ -7,7 +7,7 @@
 import cv2
 import time,signal,os
 from datetime import datetime
-from sautils3_2 import saMotionDetect,imgResize,makeDir,handleChange,setthresh,\
+from sautils3_5 import saMotionDetect,imgResize,makeDir,handleChange,setthresh,\
      sadiskUse,saoldestFile,sadiskManage,calcEntropy
 from config3 import showvid,cmaxMinD,cmaxInc,cmaxDec,bWt,nIter,tsok,Perc,\
      night_st,day_st,iPx_night,iPx_day,cWidth,dpath,dfreq,dday,dlim,markcnt,\
@@ -50,6 +50,8 @@ if logg == 1: # if logging is enabled
     f = open(ffname,'a') #wrt append
     if f.closed: print(fname+'output file is not available')
     else: print(ffname+' Opened for update every: '+str(lfreq)+' sec')
+    savbw = 'yes'
+else: savbw = 'no'
 
 t_st = time.time()
 while(cap.isOpened()):
@@ -82,11 +84,14 @@ while(cap.isOpened()):
         break
     lcont = len(contours)
     if (lcont > nCnt and cmax_area > cmax) or (lcont > lCrt):
-       if markcnt == 1: frame = imgcn
-       img = imgResize(frame,Perc)
-       op,op2 = handleChange(img,imgbw,dpath,cpath,tsok)# md saves and returns
-       eN = round(calcEntropy(op),3) # entropy actual image
-       eN2 = round(calcEntropy(op2),3) # entropy b/w contours image
+       if markcnt == 1: frame = imgcn.copy()
+       if Perc < 100: img = imgResize(frame,Perc)
+       else: img = frame.copy()
+       op,op2 = handleChange(img,imgbw,dpath,cpath,tsok,savbw)#md saves returns
+       if savbw == 'yes':
+           eN  = round(calcEntropy(op),3) # entropy actual image
+           eN2 = round(calcEntropy(op2),3) # entropy b/w contours image
+       else: eN = eN2 = -1
        print(datetime.now().strftime("%d/%m %H:%M:%S"),\
        'MD','fR:',round(fR,1),'iPx: '+str(cPx),\
        ' cnts: '+str(lcont),'a: '+str(round(cmax_area,3)),'%',\

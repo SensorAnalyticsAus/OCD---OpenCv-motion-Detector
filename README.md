@@ -17,6 +17,7 @@ Bash shell scripts in `kmeans/`folder are RaspberryPi OS/Linux specif. Also some
 * <a href="https://youtu.be/sBTi22CeHho">OCD night vision</a>
 
 ## What's New (in reverse chronological order)
+* Support for [KM-GEN](https://github.com/SensorAnalyticsAus/KM-GEN) added.
 * Support for python virtual environment added.
 * `sautils` updated to ver 3.2. A major bug in `kmeans` which restricted the use of image classification to OCD camera filename format has been relaxed. Now any filename which contains timestamp as YYYYMMDD-HHMMSS will generally work.
 * Bug fixes.
@@ -66,6 +67,7 @@ kmeans/daily-driver
 moviefrm-list
 moviefrm-list-ni
 ```
+If using [KM-GEN](https://github.com/SensorAnalyticsAus/KM-GEN) for video analysis (instead of `kmeans/`) then logging and gathering of additional b/w images can be turned off by setting `logg = 0` in `config3.py` as `KM-GEN` generates its own ml data for analysis.
 
 ## Running the code
 ```
