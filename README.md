@@ -67,7 +67,7 @@ kmeans/daily-driver
 moviefrm-list
 moviefrm-list-ni
 ```
-If using [KM-GEN](https://github.com/SensorAnalyticsAus/KM-GEN) for video analysis (instead of `kmeans/`) then logging and gathering of additional b/w images can be turned off by setting `logg = 0` in `config3.py` as `KM-GEN` generates its own ml data for analysis.
+If using [KM-GEN](https://github.com/SensorAnalyticsAus/KM-GEN) for frame analysis (instead of `kmeans/`) then logging and gathering of additional b/w images can be turned off by setting `logg = 0` in `config3.py` as `KM-GEN` generates its own ml data for analysis.
 
 ## Running the code
 ```
