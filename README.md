@@ -85,6 +85,6 @@ ctrl-a-d (to exit)
 ## Troubleshooting
 Main reasons for program not working. 
 * A python dependency is missing.
-* Program path are not correctly specified.
+* Program paths are not correctly specified.
 * Incorrect camera url or camera is not working. Suggest testing camera url with VLC.
 * Captured image filenames either have no timestamp or their timestamp format does not match YYYYMMDD-HHMMSS format.
