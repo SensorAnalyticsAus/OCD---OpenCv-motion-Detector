@@ -2,8 +2,8 @@
 
 import sys
 if len(sys.argv) < 5:
-   print('USAGE: 0|1 numClusters YYYYDDMMHHMMSS YYYYMMDDHHMMSS')
-   print('0:Elbow Analyses 1:Actual KMeans YYYYDDMMHHMMSS: from -> to date-')
+   print('USAGE: 0|1 numClusters YYYYMMDDHHMMSS YYYYMMDDHHMMSS')
+   print('0:Elbow Analyses 1:Actual KMeans YYYYMMDDHHMMSS: from -> to date-')
    print('time range (HHMMSS field in 24-hour clock format)')
    sys.exit(1)
 sys.path.append('..')
@@ -11,7 +11,7 @@ import numpy as np
 from sklearn.cluster import KMeans
 import pickle
 import matplotlib.pyplot as plt
-from sautils3_2 import genRows
+from sautils3_5 import genRows
 import matplotlib
 import os
 
