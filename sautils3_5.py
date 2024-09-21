@@ -234,8 +234,6 @@ def fileDt(fname): # searches YYYYMMDD-HHMMSS in filename rets YYYYMMDDHHMMSS
         d=d.replace('-','')
  else: 
         d='19000101000000' # If None then a very old date is sent
-        print('undated file/folder:-> {}{}{} ! returning:{}'
-              .format(color.RED,fname,color.END,d))
  return(d)
 def fileTs(filename): # get the int timestamp for fileDt string
  fDt=datetime.datetime.strptime(fileDt(filename),'%Y%m%d%H%M%S').timestamp()
@@ -250,6 +248,14 @@ def num_name(filename): # extracts all digits in a string as a number
         for s in nlist:
                numstr += s
  return int(numstr)
+def fileSel(fpath,sdt,edt): # rets unsorted list of files in datetime range
+ if isinstance(sdt,int) or isinstance(sdt,float): sdt=str(sdt) # need as string
+ if isinstance(edt,int) or isinstance(edt,float): edt=str(edt) # need as string
+ st_d_t=datetime.datetime.strptime(sdt,'%Y%m%d%H%M%S').timestamp()
+ en_d_t=datetime.datetime.strptime(edt,'%Y%m%d%H%M%S').timestamp()
+ lst = [i for i  in os.listdir(fpath)
+          if fileTs(i) >= int(st_d_t) and fileTs(i) <= int(en_d_t)]
+ return lst
 def writeLog(msg,log_file):
  with open(log_file,'a') as logfile:
      logfile.write(msg+'\n')
@@ -405,7 +411,7 @@ def chunk(lst, n): # breaks a list into equal sized n chunks
 	for i in range(0, len(lst), n):
 		# yields a chunk of the list 
 		yield lst[i: i + n]
-def workpacks(imgpath,workDir,chunks):
+def workpacks(imgpath,chunks,workDir='./tmp-pkl'):
  wpcks = []
  for (i, images) in enumerate(chunks):
    outPath_fnames=os.path.join(workDir, 'proc_{}_fnames.pkl'.format(i))
