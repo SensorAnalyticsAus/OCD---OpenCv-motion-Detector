@@ -35,7 +35,7 @@ Bash shell scripts in `kmeans/`folder are RaspberryPi OS/Linux specif. Also some
 
 ### Prerequisites
 * raspberry pi 4b or a debian linux/mac PC (windows with cygwin may work - not tested)
-* python 3.6 - 3.11
+* python 3.6 and higher
 * work-around for accessing a rtsp stream with udp transport only remotely, <a href="https://github.com/SensorAnalyticsAus/remote_rtsp">SensorAnalyticsAu/remote_rtsp</a>
 
 Remember to pip install numpy before installing opencv.
