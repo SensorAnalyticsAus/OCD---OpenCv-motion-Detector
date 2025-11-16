@@ -228,7 +228,7 @@ def genRows(filePath,dt_st,dt_en): # path to MD.log,frm: YYYYMMDD,to: YYYYMMDD
             if int(dtm) >= int(dt_st) and int(dtm) <= int(dt_en):
                 yield line
 def fileDt(fname): # searches YYYYMMDD-HHMMSS in filename rets YYYYMMDDHHMMSS
- s=re.search("([0-9]{4}[0-9]{2}[0-9]{2}\-[0-9]{6})",fname)
+ s=re.search(r"([0-9]{4}[0-9]{2}[0-9]{2}\-[0-9]{6})",fname)
  if s:
         d=s.group(0)
         d=d.replace('-','')
@@ -239,7 +239,7 @@ def fileTs(filename): # get the int timestamp for fileDt string
  fDt=datetime.datetime.strptime(fileDt(filename),'%Y%m%d%H%M%S').timestamp()
  return int(round(fDt))
 def num_name(filename): # extracts all digits in a string as a number
- regex = re.compile('\d+')
+ regex = re.compile(r'\d+')
  nlist=regex.findall(filename)
  numstr=''
  if not nlist:
