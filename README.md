@@ -12,9 +12,9 @@ Tested with Tapo, Sricam, PiCam, Hiseeu, and Macbook Pro cameras. The program is
 
 ${\textsf{\color{red}NB}}$ :
 Bash shell scripts in `kmeans/`folder are RaspberryPi OS/Linux specif. Also some files in it may require editing paths at the top. Using these scripts on MacOS bash will need some tweaking. Alternatively `train-km.py` and `predict-km.py` produce `ffnames.txt` containing full paths to images selected by KMeans over the user specified time window (`train-km.py` arg3 and arg4).
-### Demos
+
+### Demo
 * <a href="https://youtu.be/SsAoOSjJwRs">OCD2 night vision</a>
-* <a href="https://youtu.be/sBTi22CeHho">OCD night vision</a>
 
 ## What's New (in reverse chronological order)
 * Support for [KM-GEN](https://github.com/SensorAnalyticsAus/KM-GEN) added.
