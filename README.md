@@ -45,9 +45,10 @@ python -m pip install -U pip
 python -m pip install -U scikit-image 
 pip install opencv-python
 pip install shutils
-pip install -U scikit-learn (for kmeans)
+pip install -U scikit-learn
 pip install matplotlib
-
+```
+```
 sudo apt update
 sudo apt upgrade
 sudo apt install screen
