@@ -1,7 +1,9 @@
 # OCD Simple Motion Detection NVR
 
 ## About
-OCD3 is a software network video recorder. Key features: 
+OCD3 is a software network video recorder and video analyser for security cameras monitoring in safe home and safe city applications. It can summarise dailly events, in compressed time-lapse videos, picking up suspcious activity while ignoring routine events. Allowing monitoring of large number of cameras quite effectively.
+
+Key features: 
 * low-light motion-detection, 
 * false-positive motion alert reduction,
 * AI summation of daily events (kmeans folder). 
